@@ -14,6 +14,7 @@ states <- tibble(state_name = state.name,
                                     "NE-3",     "NE-3"))
 
 # FiveThirtyEight --------------------------------------------------------------
+# https://projects.fivethirtyeight.com/2020-election-forecast/
 d538 <- read_csv("https://projects.fivethirtyeight.com/2020-general-data/presidential_state_toplines_2020.csv")
 d538 <- d538 %>%
   select(state, trump = winstate_inc, biden = winstate_chal, timestamp) %>%
@@ -27,6 +28,7 @@ d538 <- d538 %>%
   mutate(model = "FiveThirtyEight", .before = 1)
 
 # Economist --------------------------------------------------------------------
+# https://projects.economist.com/us-2020-forecast/president
 temp <- tempfile()
 download.file("https://cdn.economistdatateam.com/us-2020-forecast/data/president/economist_model_output.zip", temp)
 dEcon <- read_csv(unz(temp, "output/site_data//state_averages_and_predictions_topline.csv"))
@@ -46,6 +48,7 @@ dEcon <- dEcon %>%
   mutate(model = "Economist", .before = 1)
 
 # PredictIt --------------------------------------------------------------------
+# https://www.predictit.org/markets/13/Prez-Election
 markets <- all_markets()
 
 dPredit <- markets %>%
@@ -71,6 +74,16 @@ dPredit <- markets %>%
   mutate(model = "PredictIt", .before = 1)
 
 # Decision Desk HQ -------------------------------------------------------------
+# https://forecast.decisiondeskhq.com/president
 
 
-# 
+
+
+
+# JHK: https://projects.jhkforecasts.com/presidential-forecast/
+# lean tossup: https://leantossup.ca/us-presidency/
+# plural vote: http://www.pluralvote.com/article/2020-forecast/
+# pec: https://election.princeton.edu/for-fellow-geeks/
+# cycle: cycle.news
+# new states men: https://www.newstatesman.com/us-election-2020
+# ourprogress: https://www.ourprogress.org/forecast
