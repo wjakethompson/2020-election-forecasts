@@ -3,7 +3,6 @@ library(lubridate)
 library(rpredictit)
 library(readxl)
 library(rvest)
-library(V8)
 
 # Functions --------------------------------------------------------------------
 paste_after <- function(xs, ys) paste0(ys, xs)
