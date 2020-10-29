@@ -211,7 +211,28 @@ dReed <- read_html("https://reedforecasts.com/") %>%
   
 # Decision Desk HQ -------------------------------------------------------------
 # https://forecast.decisiondeskhq.com/president
+dDDHQ <- "https://forecast.decisiondeskhq.com/api/v1/voteshare-models/?chamber=President"
+dDDHQ <- fromJSON(file)
+dDDHQ <- dDDHQ %>%
+  as_tibble() %>%
+  mutate(date = ymd(date)) %>%
+  slice_max(order_by = date)
 
+dDDHQ <- bind_cols(
+  dDDHQ$election %>%
+    as_tibble() %>%
+    select(-electionJson) %>%
+    distinct(raceId, raceName, fullState, state) %>%
+    select(state_name = raceName),
+  dDDHQ %>%
+    select(trump = gopWinProbability, biden = demWinProbability)
+) %>%
+  mutate(state_name = str_replace_all(state_name, "Maine ", "ME-"),
+         state_name = str_replace_all(state_name, "Nebraska ", "NE-")) %>%
+  full_join(states, by = "state_name") %>%
+  select(state_name, state_abbr, trump, biden) %>%
+  arrange(state_name) %>%
+  mutate(model = "Decision Desk HQ", .before = 1)
 
 # Plural Vote ------------------------------------------------------------------
 # http://www.pluralvote.com/article/2020-forecast/
