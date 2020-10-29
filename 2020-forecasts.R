@@ -2,6 +2,11 @@ library(tidyverse)
 library(lubridate)
 library(rpredictit)
 library(readxl)
+library(rvest)
+library(V8)
+
+# Functions --------------------------------------------------------------------
+paste_after <- function(xs, ys) paste0(ys, xs)
 
 # State and abbreviations ------------------------------------------------------
 states <- tibble(state_name = state.name,
@@ -142,19 +147,81 @@ dPEC <- dPEC %>%
   arrange(state_name) %>%
   mutate(model = "Princeton", .before = 1)
 
+# Electoral Polls --------------------------------------------------------------
+# https://electoralpolls.com/
+dEP <- read_html("https://electoralpolls.com/projection") %>%
+  html_nodes("table") %>%
+  .[[1]] %>%
+  html_table(fill = TRUE, header = FALSE) %>%
+  as_tibble()
 
+dEP <- dEP %>%
+  slice(3:58) %>%
+  select(state_name = X2, pct = X8, cum_ec = X9) %>%
+  mutate(pct = parse_number(pct) / 100,
+         cum_ec = parse_number(cum_ec),
+         increase = cum_ec > lag(cum_ec, default = TRUE),
+         trump = case_when(increase ~ 1 - pct,
+                           !increase ~ pct),
+         biden = case_when(increase ~ pct,
+                           !increase ~ 1 - pct),
+         state_name = str_replace_all(state_name, " \\(.*\\)", ""),
+         state_name = str_replace_all(state_name, "Maine CD", "ME"),
+         state_name = str_replace_all(state_name, "Nebraska CD", "NE"),
+         state_name = str_replace_all(state_name, "Tipping Point", ""),
+         state_name = str_trim(state_name)) %>%
+  full_join(states, by = "state_name") %>%
+  select(state_name, state_abbr, trump, biden) %>%
+  arrange(state_name) %>%
+  mutate(model = "Electoral Polls", .before = 1)
 
-
-
-# Electoral Polls: https://electoralpolls.com/
-# Race to the White House: https://www.racetothewh.com/president
-# Reed Forecasts: https://reedforecasts.com/
-
+# Reed Forecasts ---------------------------------------------------------------
+# https://reedforecasts.com/
+dReed <- read_html("https://reedforecasts.com/") %>%
+  html_nodes("script") %>%
+  as.character() %>%
+  str_subset("main\\..*\\.js") %>%
+  str_extract("/static/js/.*\\.js") %>%
+  paste_after("https://reedforecasts.com") %>%
+  read_html() %>%
+  html_text() %>%
+  str_sub(start = 1L, end = 5000L) %>%
+  str_extract("\\{\".*\\)\\}") %>%
+  str_split(",") %>%
+  flatten_chr() %>%
+  map_df(function(.x) {
+    state <- str_extract(.x, "\".*\"") %>%
+      str_replace_all("\"", "")
+    
+    pct <- .x %>%
+      str_split(":") %>%
+      flatten_chr() %>%
+      .[2] %>%
+      str_replace_all("[^0-9\\.]", "") %>%
+      as.numeric()
+    
+    tibble(state_name = state, trump = 1 - (pct / 100), biden = pct / 100)
+  }) %>%
+  filter(state_name != "National") %>%
+  mutate(state_name = str_replace_all(state_name, "Maine CD", "ME"),
+         state_name = str_replace_all(state_name, "Nebraska CD", "NE")) %>%
+  full_join(states, by = "state_name") %>%
+  select(state_name, state_abbr, trump, biden) %>%
+  arrange(state_name) %>%
+  mutate(model = "Reed", .before = 1)
+  
 # Decision Desk HQ -------------------------------------------------------------
 # https://forecast.decisiondeskhq.com/president
+
 
 # Plural Vote ------------------------------------------------------------------
 # http://www.pluralvote.com/article/2020-forecast/
 
+
 # Progress Campaign ------------------------------------------------------------
 # https://www.ourprogress.org/forecast
+
+
+# Race to the White House ------------------------------------------------------
+# https://www.racetothewh.com/president
+
