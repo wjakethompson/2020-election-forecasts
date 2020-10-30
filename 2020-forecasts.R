@@ -167,6 +167,8 @@ dEP <- dEP %>%
   select(state_name = X2, pct = X8, cum_ec = X9) %>%
   mutate(pct = parse_number(pct) / 100,
          cum_ec = parse_number(cum_ec),
+         cum_ec = case_when(is.na(cum_ec) & pct == .5 ~ lag(cum_ec) + 1,
+                            TRUE ~ cum_ec),
          increase = cum_ec > lag(cum_ec, default = TRUE),
          trump = case_when(increase ~ 1 - pct,
                            !increase ~ pct),
