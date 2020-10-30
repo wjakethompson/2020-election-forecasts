@@ -1,8 +1,10 @@
 library(tidyverse)
 library(lubridate)
 library(rpredictit)
+library(jsonlite)
 library(readxl)
 library(rvest)
+library(here)
 
 # Functions --------------------------------------------------------------------
 paste_after <- function(xs, ys) paste0(ys, xs)
@@ -30,7 +32,8 @@ d538 <- d538 %>%
   full_join(states, by = c("state" = "state_name")) %>%
   select(state_name = state, state_abbr, trump, biden) %>%
   arrange(state_name) %>%
-  mutate(model = "FiveThirtyEight", .before = 1)
+  mutate(model = "FiveThirtyEight", .before = 1) %>%
+  write_csv(here("forecasts", "fivethirtyeight.csv"))
 
 # Economist --------------------------------------------------------------------
 # https://projects.economist.com/us-2020-forecast/president
@@ -50,7 +53,8 @@ dEcon <- dEcon %>%
   full_join(states, by = c("state" = "state_abbr")) %>%
   select(state_name, state_abbr = state, trump, biden) %>%
   arrange(state_name) %>%
-  mutate(model = "Economist", .before = 1)
+  mutate(model = "Economist", .before = 1) %>%
+  write_csv(here("forecasts", "economist.csv"))
 
 # PredictIt --------------------------------------------------------------------
 # https://www.predictit.org/markets/13/Prez-Election
@@ -76,7 +80,8 @@ dPredit <- dPredit %>%
   full_join(states, by = c("state" = "state_name")) %>%
   select(state_name = state, state_abbr, trump, biden) %>%
   arrange(state_name) %>%
-  mutate(model = "PredictIt", .before = 1)
+  mutate(model = "PredictIt", .before = 1) %>%
+  write_csv(here("forecasts", "predicit.csv"))
 
 # Jack Kersting ----------------------------------------------------------------
 # https://projects.jhkforecasts.com/presidential-forecast/
@@ -100,7 +105,8 @@ dJHK <- dJHK %>%
   full_join(states, by = c("state" = "state_name")) %>%
   select(state_name = state, state_abbr, trump, biden) %>%
   arrange(state_name) %>%
-  mutate(model = "JHK", .before = 1)
+  mutate(model = "JHK", .before = 1) %>%
+  write_csv(here("forecasts", "jhk.csv"))
 
 # Lean Tossup ------------------------------------------------------------------
 # https://leantossup.ca/us-presidency/
@@ -124,7 +130,8 @@ dLT <- dLT %>%
   full_join(states, by = "state_name") %>%
   select(state_name, state_abbr, trump, biden) %>%
   arrange(state_name) %>%
-  mutate(model = "Lean Tossup", .before = 1)
+  mutate(model = "Lean Tossup", .before = 1) %>%
+  write_csv(here("forecasts", "leantossup.csv"))
 
 # Princeton Election Consortium ------------------------------------------------
 # pec: https://election.princeton.edu/for-fellow-geeks/
@@ -144,7 +151,8 @@ dPEC <- dPEC %>%
   full_join(states, by = "state_abbr") %>%
   select(state_name, state_abbr, trump, biden) %>%
   arrange(state_name) %>%
-  mutate(model = "Princeton", .before = 1)
+  mutate(model = "Princeton", .before = 1) %>%
+  write_csv(here("forecasts", "princeton.csv"))
 
 # Electoral Polls --------------------------------------------------------------
 # https://electoralpolls.com/
@@ -172,7 +180,8 @@ dEP <- dEP %>%
   full_join(states, by = "state_name") %>%
   select(state_name, state_abbr, trump, biden) %>%
   arrange(state_name) %>%
-  mutate(model = "Electoral Polls", .before = 1)
+  mutate(model = "Electoral Polls", .before = 1) %>%
+  write_csv(here("forecasts", "electoralpolls.csv"))
 
 # Reed Forecasts ---------------------------------------------------------------
 # https://reedforecasts.com/
@@ -207,12 +216,13 @@ dReed <- read_html("https://reedforecasts.com/") %>%
   full_join(states, by = "state_name") %>%
   select(state_name, state_abbr, trump, biden) %>%
   arrange(state_name) %>%
-  mutate(model = "Reed", .before = 1)
+  mutate(model = "Reed", .before = 1) %>%
+  write_csv(here("forecasts", "reed.csv"))
   
 # Decision Desk HQ -------------------------------------------------------------
 # https://forecast.decisiondeskhq.com/president
 dDDHQ <- "https://forecast.decisiondeskhq.com/api/v1/voteshare-models/?chamber=President"
-dDDHQ <- fromJSON(file)
+dDDHQ <- fromJSON(dDDHQ)
 dDDHQ <- dDDHQ %>%
   as_tibble() %>%
   mutate(date = ymd(date)) %>%
@@ -232,7 +242,8 @@ dDDHQ <- bind_cols(
   full_join(states, by = "state_name") %>%
   select(state_name, state_abbr, trump, biden) %>%
   arrange(state_name) %>%
-  mutate(model = "Decision Desk HQ", .before = 1)
+  mutate(model = "Decision Desk HQ", .before = 1) %>%
+  write_csv(here("forecasts", "decisiondeskhq.csv"))
 
 # Plural Vote ------------------------------------------------------------------
 # http://www.pluralvote.com/article/2020-forecast/
