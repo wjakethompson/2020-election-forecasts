@@ -245,12 +245,37 @@ dDDHQ <- bind_cols(
   mutate(model = "Decision Desk HQ", .before = 1) %>%
   write_csv(here("forecasts", "decisiondeskhq.csv"))
 
-# Plural Vote ------------------------------------------------------------------
-# http://www.pluralvote.com/article/2020-forecast/
-
-
 # Progress Campaign ------------------------------------------------------------
 # https://www.ourprogress.org/forecast
+dPC <- read_html("https://www.ourprogress.org/forecast")
+
+dPC <- dPC %>%
+  html_nodes("a") %>%
+  html_attr("href") %>%
+  str_subset("20Odds") %>%
+  unique() %>%
+  read_csv(skip = 1)
+
+dPC %>%
+  select(state_name = X1, trump = `Trump Odds`, biden = `Biden Odds`) %>%
+  mutate(trump = parse_number(trump) / 100,
+         biden = parse_number(biden) / 100,
+         state_name = str_replace_all(state_name, "Maine ", "ME-"),
+         state_name = str_replace_all(state_name, "Nebraska ", "NE-"),
+         state_name = str_replace_all(state_name, "1st", "1"),
+         state_name = str_replace_all(state_name, "2nd", "2"),
+         state_name = str_replace_all(state_name, "3rd", "3"),
+         state_name = case_when(state_name == "Washington DC" ~
+                                  "District of Columbia",
+                                TRUE ~ state_name)) %>%
+  full_join(states, by = "state_name") %>%
+  select(state_name, state_abbr, trump, biden) %>%
+  arrange(state_name) %>%
+  mutate(model = "Progress Campaign", .before = 1) %>%
+  write_csv(here("forecasts", "progresscampaign.csv"))
+  
+# Plural Vote ------------------------------------------------------------------
+# http://www.pluralvote.com/article/2020-forecast/
 
 
 # Race to the White House ------------------------------------------------------
