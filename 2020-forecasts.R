@@ -5,6 +5,10 @@ library(jsonlite)
 library(readxl)
 library(rvest)
 library(here)
+library(fs)
+library(googledrive)
+library(googlesheets4)
+library(janitor)
 
 # Functions --------------------------------------------------------------------
 paste_after <- function(xs, ys) paste0(ys, xs)
@@ -134,7 +138,7 @@ dLT <- dLT %>%
   write_csv(here("forecasts", "leantossup.csv"))
 
 # Princeton Election Consortium ------------------------------------------------
-# pec: https://election.princeton.edu/for-fellow-geeks/
+# https://election.princeton.edu/for-fellow-geeks/
 dPEC <- read_csv("https://election.princeton.edu/election2020/data/EV_stateprobs.csv",
                  col_names = FALSE)
 
@@ -276,10 +280,39 @@ dPC %>%
   mutate(model = "Progress Campaign", .before = 1) %>%
   write_csv(here("forecasts", "progresscampaign.csv"))
   
+# Race to the White House ------------------------------------------------------
+# https://www.racetothewh.com/president
+
+
 # Plural Vote ------------------------------------------------------------------
 # http://www.pluralvote.com/article/2020-forecast/
 
 
-# Race to the White House ------------------------------------------------------
-# https://www.racetothewh.com/president
+# New Statesmen ----------------------------------------------------------------
+# https://www.newstatesman.com/us-election-2020
 
+
+# The Cycle --------------------------------------------------------------------
+# https://thecycle.news/news/september-2020-election-update
+
+
+# Combine forecasts ------------------------------------------------------------
+drive_auth(email = TRUE)
+gs4_auth(token = drive_token())
+
+ec <- read_csv(here("electoral-votes.csv"),
+               col_types = cols(state_name = col_character(),
+                                state_abbr = col_character(),
+                                ec_votes = col_integer()))
+
+dir_ls(here("forecasts")) %>%
+  map_dfr(read_csv, col_types = cols(model = col_character(),
+                                     state_name = col_character(),
+                                     state_abbr = col_character(),
+                                     trump = col_double(),
+                                     biden = col_double())) %>%
+  full_join(ec, by = c("state_name", "state_abbr")) %>%
+  select(state_name, state_abbr, state_ecv = ec_votes, model, biden) %>%
+  pivot_wider(names_from = model, values_from = biden) %>%
+  clean_names() %>%
+  write_sheet(ss = drive_get("2020 Election Forecasts"), sheet = "Forecasts")
