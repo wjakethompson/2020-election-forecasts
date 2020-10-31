@@ -282,7 +282,7 @@ dPC %>%
   
 # Race to the White House ------------------------------------------------------
 # https://www.racetothewh.com/president
-
+# fb message
 
 # Plural Vote ------------------------------------------------------------------
 # http://www.pluralvote.com/article/2020-forecast/
@@ -290,11 +290,11 @@ dPC %>%
 
 # New Statesmen ----------------------------------------------------------------
 # https://www.newstatesman.com/us-election-2020
-
+# fb message
 
 # The Cycle --------------------------------------------------------------------
 # https://thecycle.news/news/september-2020-election-update
-
+# twitter dm
 
 # Combine forecasts ------------------------------------------------------------
 drive_auth(email = TRUE)
