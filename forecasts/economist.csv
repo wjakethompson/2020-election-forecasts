@@ -1,57 +1,57 @@
 model,state_name,state_abbr,trump,biden
 Economist,Alabama,AL,1,0
-Economist,Alaska,AK,0.9395,0.0605
-Economist,Arizona,AZ,0.22562499999999996,0.774375
+Economist,Alaska,AK,0.95685,0.04315
+Economist,Arizona,AZ,0.27847500000000003,0.721525
 Economist,Arkansas,AR,1,0
 Economist,California,CA,0,1
-Economist,Colorado,CO,0.002375000000000016,0.997625
+Economist,Colorado,CO,0.0017249999999999766,0.998275
 Economist,Connecticut,CT,0,1
 Economist,Delaware,DE,0,1
 Economist,District of Columbia,DC,0,1
-Economist,Florida,FL,0.236,0.764
-Economist,Georgia,GA,0.4335,0.5665
+Economist,Florida,FL,0.2632,0.7368
+Economist,Georgia,GA,0.46597500000000003,0.534025
 Economist,Hawaii,HI,0,1
 Economist,Idaho,ID,1,0
-Economist,Illinois,IL,1.2500000000004174e-4,0.999875
-Economist,Indiana,IN,0.999375,6.25e-4
-Economist,Iowa,IA,0.5365,0.4635
-Economist,Kansas,KS,0.99675,0.00325
+Economist,Illinois,IL,2.5000000000052758e-5,0.999975
+Economist,Indiana,IN,0.99975,2.5e-4
+Economist,Iowa,IA,0.630575,0.369425
+Economist,Kansas,KS,0.9985,0.0015
 Economist,Kentucky,KY,1,0
-Economist,Louisiana,LA,0.999625,3.75e-4
-Economist,Maine,ME,0.001375000000000015,0.998625
+Economist,Louisiana,LA,0.999575,4.25e-4
+Economist,Maine,ME,0.0016249999999999876,0.998375
 Economist,Maryland,MD,0,1
 Economist,Massachusetts,MA,0,1
-Economist,ME-1,ME-1,0.001375000000000015,0.998625
-Economist,ME-2,ME-2,0.001375000000000015,0.998625
-Economist,Michigan,MI,0.02112499999999995,0.978875
-Economist,Minnesota,MN,0.01387499999999997,0.986125
-Economist,Mississippi,MS,0.995125,0.004875
-Economist,Missouri,MO,0.972875,0.027125
-Economist,Montana,MT,0.984875,0.015125
+Economist,ME-1,ME-1,0.0016249999999999876,0.998375
+Economist,ME-2,ME-2,0.0016249999999999876,0.998375
+Economist,Michigan,MI,0.02410000000000001,0.9759
+Economist,Minnesota,MN,0.01759999999999995,0.9824
+Economist,Mississippi,MS,0.996575,0.003425
+Economist,Missouri,MO,0.984475,0.015525
+Economist,Montana,MT,0.990625,0.009375
 Economist,NE-1,NE-1,0.999875,1.25e-4
 Economist,NE-2,NE-2,0.999875,1.25e-4
 Economist,NE-3,NE-3,0.999875,1.25e-4
 Economist,Nebraska,NE,0.999875,1.25e-4
-Economist,Nevada,NV,0.06374999999999997,0.93625
-Economist,New Hampshire,NH,0.022249999999999992,0.97775
+Economist,Nevada,NV,0.06605000000000005,0.93395
+Economist,New Hampshire,NH,0.024399999999999977,0.9756
 Economist,New Jersey,NJ,0,1
-Economist,New Mexico,NM,0.0040000000000000036,0.996
+Economist,New Mexico,NM,0.0034999999999999476,0.9965
 Economist,New York,NY,0,1
-Economist,North Carolina,NC,0.30500000000000005,0.695
+Economist,North Carolina,NC,0.35135000000000005,0.64865
 Economist,North Dakota,ND,1,0
-Economist,Ohio,OH,0.614625,0.385375
+Economist,Ohio,OH,0.6663,0.3337
 Economist,Oklahoma,OK,1,0
 Economist,Oregon,OR,0,1
-Economist,Pennsylvania,PA,0.06437499999999996,0.935625
+Economist,Pennsylvania,PA,0.06910000000000005,0.9309
 Economist,Rhode Island,RI,0,1
-Economist,South Carolina,SC,0.973125,0.026875
+Economist,South Carolina,SC,0.982425,0.017575
 Economist,South Dakota,SD,1,0
-Economist,Tennessee,TN,0.99975,2.5e-4
-Economist,Texas,TX,0.7284999999999999,0.2715
-Economist,Utah,UT,1,0
+Economist,Tennessee,TN,0.999975,2.5e-5
+Economist,Texas,TX,0.737025,0.262975
+Economist,Utah,UT,0.999975,2.5e-5
 Economist,Vermont,VT,0,1
-Economist,Virginia,VA,0.004750000000000032,0.99525
+Economist,Virginia,VA,0.0044999999999999485,0.9955
 Economist,Washington,WA,0,1
 Economist,West Virginia,WV,1,0
-Economist,Wisconsin,WI,0.02862500000000001,0.971375
+Economist,Wisconsin,WI,0.03864999999999996,0.96135
 Economist,Wyoming,WY,1,0

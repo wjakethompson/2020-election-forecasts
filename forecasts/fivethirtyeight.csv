@@ -1,57 +1,57 @@
 model,state_name,state_abbr,trump,biden
-FiveThirtyEight,Alabama,AL,0.982975,0.017025
-FiveThirtyEight,Alaska,AK,0.852075,0.147925
-FiveThirtyEight,Arizona,AZ,0.30675,0.69325
-FiveThirtyEight,Arkansas,AR,0.9917,0.0083
-FiveThirtyEight,California,CA,0.001725,0.998275
-FiveThirtyEight,Colorado,CO,0.032175,0.967825
-FiveThirtyEight,Connecticut,CT,0.001,0.999
-FiveThirtyEight,Delaware,DE,7.5e-5,0.999925
+FiveThirtyEight,Alabama,AL,0.983675,0.016325
+FiveThirtyEight,Alaska,AK,0.8501,0.1499
+FiveThirtyEight,Arizona,AZ,0.303575,0.696425
+FiveThirtyEight,Arkansas,AR,0.990575,0.009425
+FiveThirtyEight,California,CA,0.001975,0.998025
+FiveThirtyEight,Colorado,CO,0.036275,0.963725
+FiveThirtyEight,Connecticut,CT,7.75e-4,0.999225
+FiveThirtyEight,Delaware,DE,5e-5,0.99995
 FiveThirtyEight,District of Columbia,DC,0,1
-FiveThirtyEight,Florida,FL,0.3468,0.6532
-FiveThirtyEight,Georgia,GA,0.41675,0.58325
-FiveThirtyEight,Hawaii,HI,0.0077,0.9923
-FiveThirtyEight,Idaho,ID,0.995325,0.004675
-FiveThirtyEight,Illinois,IL,0.001475,0.998525
-FiveThirtyEight,Indiana,IN,0.949775,0.050225
-FiveThirtyEight,Iowa,IA,0.5504,0.4496
-FiveThirtyEight,Kansas,KS,0.973075,0.026925
-FiveThirtyEight,Kentucky,KY,0.98555,0.01445
-FiveThirtyEight,Louisiana,LA,0.969375,0.030625
-FiveThirtyEight,Maine,ME,0.096775,0.903225
-FiveThirtyEight,Maryland,MD,5e-4,0.9995
-FiveThirtyEight,Massachusetts,MA,6e-4,0.9994
-FiveThirtyEight,ME-1,ME-1,0.0258,0.9742
-FiveThirtyEight,ME-2,ME-2,0.444025,0.555975
-FiveThirtyEight,Michigan,MI,0.04185,0.95815
-FiveThirtyEight,Minnesota,MN,0.0534,0.9466
-FiveThirtyEight,Mississippi,MS,0.9125,0.0875
-FiveThirtyEight,Missouri,MO,0.919925,0.080075
-FiveThirtyEight,Montana,MT,0.8495,0.1505
-FiveThirtyEight,NE-1,NE-1,0.95875,0.04125
-FiveThirtyEight,NE-2,NE-2,0.22085,0.77915
-FiveThirtyEight,NE-3,NE-3,0.999825,1.75e-4
-FiveThirtyEight,Nebraska,NE,0.993575,0.006425
-FiveThirtyEight,Nevada,NV,0.105775,0.894225
-FiveThirtyEight,New Hampshire,NH,0.1133,0.8867
-FiveThirtyEight,New Jersey,NJ,0.006025,0.993975
-FiveThirtyEight,New Mexico,NM,0.02745,0.97255
-FiveThirtyEight,New York,NY,5e-5,0.99995
-FiveThirtyEight,North Carolina,NC,0.326225,0.673775
-FiveThirtyEight,North Dakota,ND,0.980975,0.019025
-FiveThirtyEight,Ohio,OH,0.545175,0.454825
+FiveThirtyEight,Florida,FL,0.3183,0.6817
+FiveThirtyEight,Georgia,GA,0.41475,0.58525
+FiveThirtyEight,Hawaii,HI,0.0068,0.9932
+FiveThirtyEight,Idaho,ID,0.9947,0.0053
+FiveThirtyEight,Illinois,IL,6.75e-4,0.999325
+FiveThirtyEight,Indiana,IN,0.9561,0.0439
+FiveThirtyEight,Iowa,IA,0.612525,0.387475
+FiveThirtyEight,Kansas,KS,0.97105,0.02895
+FiveThirtyEight,Kentucky,KY,0.985,0.015
+FiveThirtyEight,Louisiana,LA,0.97275,0.02725
+FiveThirtyEight,Maine,ME,0.094825,0.905175
+FiveThirtyEight,Maryland,MD,6e-4,0.9994
+FiveThirtyEight,Massachusetts,MA,5.75e-4,0.999425
+FiveThirtyEight,ME-1,ME-1,0.02775,0.97225
+FiveThirtyEight,ME-2,ME-2,0.416925,0.583075
+FiveThirtyEight,Michigan,MI,0.05095,0.94905
+FiveThirtyEight,Minnesota,MN,0.040775,0.959225
+FiveThirtyEight,Mississippi,MS,0.913925,0.086075
+FiveThirtyEight,Missouri,MO,0.928325,0.071675
+FiveThirtyEight,Montana,MT,0.844475,0.155525
+FiveThirtyEight,NE-1,NE-1,0.960575,0.039425
+FiveThirtyEight,NE-2,NE-2,0.254,0.746
+FiveThirtyEight,NE-3,NE-3,0.99965,3.5e-4
+FiveThirtyEight,Nebraska,NE,0.993825,0.006175
+FiveThirtyEight,Nevada,NV,0.1279,0.8721
+FiveThirtyEight,New Hampshire,NH,0.1119,0.8881
+FiveThirtyEight,New Jersey,NJ,0.007225,0.992775
+FiveThirtyEight,New Mexico,NM,0.023575,0.976425
+FiveThirtyEight,New York,NY,7.5e-5,0.999925
+FiveThirtyEight,North Carolina,NC,0.350975,0.649025
+FiveThirtyEight,North Dakota,ND,0.97705,0.02295
+FiveThirtyEight,Ohio,OH,0.5099,0.4901
 FiveThirtyEight,Oklahoma,OK,0.9943,0.0057
-FiveThirtyEight,Oregon,OR,0.02385,0.97615
-FiveThirtyEight,Pennsylvania,PA,0.141975,0.858025
+FiveThirtyEight,Oregon,OR,0.022675,0.977325
+FiveThirtyEight,Pennsylvania,PA,0.134425,0.865575
 FiveThirtyEight,Rhode Island,RI,9e-4,0.9991
-FiveThirtyEight,South Carolina,SC,0.917075,0.082925
-FiveThirtyEight,South Dakota,SD,0.94875,0.05125
-FiveThirtyEight,Tennessee,TN,0.9702,0.0298
-FiveThirtyEight,Texas,TX,0.6299,0.3701
-FiveThirtyEight,Utah,UT,0.95895,0.04105
-FiveThirtyEight,Vermont,VT,0.00565,0.99435
-FiveThirtyEight,Virginia,VA,0.010375,0.989625
-FiveThirtyEight,Washington,WA,0.007975,0.992025
-FiveThirtyEight,West Virginia,WV,0.99115,0.00885
-FiveThirtyEight,Wisconsin,WI,0.0603,0.9397
-FiveThirtyEight,Wyoming,WY,0.9984,0.0016
+FiveThirtyEight,South Carolina,SC,0.91025,0.08975
+FiveThirtyEight,South Dakota,SD,0.948225,0.051775
+FiveThirtyEight,Tennessee,TN,0.9697,0.0303
+FiveThirtyEight,Texas,TX,0.60405,0.39595
+FiveThirtyEight,Utah,UT,0.958875,0.041125
+FiveThirtyEight,Vermont,VT,0.004875,0.995125
+FiveThirtyEight,Virginia,VA,0.010675,0.989325
+FiveThirtyEight,Washington,WA,0.008,0.992
+FiveThirtyEight,West Virginia,WV,0.9917,0.0083
+FiveThirtyEight,Wisconsin,WI,0.060475,0.939525
+FiveThirtyEight,Wyoming,WY,0.99845,0.00155
