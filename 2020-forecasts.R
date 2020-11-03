@@ -312,6 +312,14 @@ dPC %>%
 #   mutate(model = "The Cycle", .before = 1) %>%
 #   write_csv(here("forecasts", "thecycle.csv"))
 
+# 2016 Map ---------------------------------------------------------------------
+# https://www.270towin.com/maps/2016-actual-electoral-map
+# d2016 <- states %>%
+#   mutate(trump = NA_real_,
+#          biden = NA_real_) %>%
+#   mutate(model = "2016 Map", .before = 1) %>%
+#   write_csv(here("forecasts", "2016map.csv"))
+
 # Combine forecasts ------------------------------------------------------------
 drive_auth(email = TRUE)
 gs4_auth(token = drive_token())
