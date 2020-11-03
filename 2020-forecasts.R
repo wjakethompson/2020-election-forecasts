@@ -282,35 +282,35 @@ dPC %>%
   
 # Race to the White House ------------------------------------------------------
 # https://www.racetothewh.com/president
-dRHW <- states %>%
-  mutate(trump = NA_real_,
-         biden = NA_real_) %>%
-  mutate(model = "Race to the White House", .before = 1) %>%
-  write_csv(here("forecasts", "racewhitehouse.csv"))
+# dRHW <- states %>%
+#   mutate(trump = NA_real_,
+#          biden = NA_real_) %>%
+#   mutate(model = "Race to the White House", .before = 1) %>%
+#   write_csv(here("forecasts", "racewhitehouse.csv"))
 
 # Plural Vote ------------------------------------------------------------------
 # http://www.pluralvote.com/article/2020-forecast/
-dPV <- states %>%
-  mutate(trump = NA_real_,
-         biden = NA_real_) %>%
-  mutate(model = "Plural Vote", .before = 1) %>%
-  write_csv(here("forecasts", "pluralvote.csv"))
+# dPV <- states %>%
+#   mutate(trump = NA_real_,
+#          biden = NA_real_) %>%
+#   mutate(model = "Plural Vote", .before = 1) %>%
+#   write_csv(here("forecasts", "pluralvote.csv"))
 
 # New Statesmen ----------------------------------------------------------------
 # https://www.newstatesman.com/us-election-2020
-dNS <- states %>%
-  mutate(trump = NA_real_,
-         biden = NA_real_) %>%
-  mutate(model = "New Statesman", .before = 1) %>%
-  write_csv(here("forecasts", "newstatesman.csv"))
+# dNS <- states %>%
+#   mutate(trump = NA_real_,
+#          biden = NA_real_) %>%
+#   mutate(model = "New Statesman", .before = 1) %>%
+#   write_csv(here("forecasts", "newstatesman.csv"))
 
 # The Cycle --------------------------------------------------------------------
 # https://thecycle.news/news/september-2020-election-update
-dTC <- states %>%
-  mutate(trump = NA_real_,
-         biden = NA_real_) %>%
-  mutate(model = "The Cycle", .before = 1) %>%
-  write_csv(here("forecasts", "thecycle.csv"))
+# dTC <- states %>%
+#   mutate(trump = NA_real_,
+#          biden = NA_real_) %>%
+#   mutate(model = "The Cycle", .before = 1) %>%
+#   write_csv(here("forecasts", "thecycle.csv"))
 
 # Combine forecasts ------------------------------------------------------------
 drive_auth(email = TRUE)

@@ -1,57 +1,57 @@
 model,state_name,state_abbr,trump,biden
-Plural Vote,Alabama,AL,NA,NA
-Plural Vote,Alaska,AK,NA,NA
-Plural Vote,Arizona,AZ,NA,NA
-Plural Vote,Arkansas,AR,NA,NA
-Plural Vote,California,CA,NA,NA
-Plural Vote,Colorado,CO,NA,NA
-Plural Vote,Connecticut,CT,NA,NA
-Plural Vote,Delaware,DE,NA,NA
-Plural Vote,Florida,FL,NA,NA
-Plural Vote,Georgia,GA,NA,NA
-Plural Vote,Hawaii,HI,NA,NA
-Plural Vote,Idaho,ID,NA,NA
-Plural Vote,Illinois,IL,NA,NA
-Plural Vote,Indiana,IN,NA,NA
-Plural Vote,Iowa,IA,NA,NA
-Plural Vote,Kansas,KS,NA,NA
-Plural Vote,Kentucky,KY,NA,NA
-Plural Vote,Louisiana,LA,NA,NA
-Plural Vote,Maine,ME,NA,NA
-Plural Vote,Maryland,MD,NA,NA
-Plural Vote,Massachusetts,MA,NA,NA
-Plural Vote,Michigan,MI,NA,NA
-Plural Vote,Minnesota,MN,NA,NA
-Plural Vote,Mississippi,MS,NA,NA
-Plural Vote,Missouri,MO,NA,NA
-Plural Vote,Montana,MT,NA,NA
-Plural Vote,Nebraska,NE,NA,NA
-Plural Vote,Nevada,NV,NA,NA
-Plural Vote,New Hampshire,NH,NA,NA
-Plural Vote,New Jersey,NJ,NA,NA
-Plural Vote,New Mexico,NM,NA,NA
-Plural Vote,New York,NY,NA,NA
-Plural Vote,North Carolina,NC,NA,NA
-Plural Vote,North Dakota,ND,NA,NA
-Plural Vote,Ohio,OH,NA,NA
-Plural Vote,Oklahoma,OK,NA,NA
-Plural Vote,Oregon,OR,NA,NA
-Plural Vote,Pennsylvania,PA,NA,NA
-Plural Vote,Rhode Island,RI,NA,NA
-Plural Vote,South Carolina,SC,NA,NA
-Plural Vote,South Dakota,SD,NA,NA
-Plural Vote,Tennessee,TN,NA,NA
-Plural Vote,Texas,TX,NA,NA
-Plural Vote,Utah,UT,NA,NA
-Plural Vote,Vermont,VT,NA,NA
-Plural Vote,Virginia,VA,NA,NA
-Plural Vote,Washington,WA,NA,NA
-Plural Vote,West Virginia,WV,NA,NA
-Plural Vote,Wisconsin,WI,NA,NA
-Plural Vote,Wyoming,WY,NA,NA
-Plural Vote,District of Columbia,DC,NA,NA
-Plural Vote,ME-1,ME-1,NA,NA
-Plural Vote,ME-2,ME-2,NA,NA
-Plural Vote,NE-1,NE-1,NA,NA
-Plural Vote,NE-2,NE-2,NA,NA
-Plural Vote,NE-3,NE-3,NA,NA
+Plural Vote,Alabama,AL,1,0
+Plural Vote,Alaska,AK,0.997,0.003
+Plural Vote,Arizona,AZ,0.574,0.426
+Plural Vote,Arkansas,AR,1,0
+Plural Vote,California,CA,0,1
+Plural Vote,Colorado,CO,0.079,0.921
+Plural Vote,Connecticut,CT,0.005,0.995
+Plural Vote,Delaware,DE,0.001,0.999
+Plural Vote,Florida,FL,0.48,0.52
+Plural Vote,Georgia,GA,0.496,0.504
+Plural Vote,Hawaii,HI,0,1
+Plural Vote,Idaho,ID,1,0
+Plural Vote,Illinois,IL,0.002,0.998
+Plural Vote,Indiana,IN,1,0
+Plural Vote,Iowa,IA,0.905,0.095
+Plural Vote,Kansas,KS,0.999,0.001
+Plural Vote,Kentucky,KY,0.995,0.005
+Plural Vote,Louisiana,LA,1,0
+Plural Vote,Maine,ME,0.016,0.984
+Plural Vote,Maryland,MD,0,1
+Plural Vote,Massachusetts,MA,0,1
+Plural Vote,Michigan,MI,0.163,0.837
+Plural Vote,Minnesota,MN,0.217,0.783
+Plural Vote,Mississippi,MS,0.999,0.001
+Plural Vote,Missouri,MO,0.95,0.05
+Plural Vote,Montana,MT,0.98,0.02
+Plural Vote,Nebraska,NE,1,0
+Plural Vote,Nevada,NV,0.165,0.835
+Plural Vote,New Hampshire,NH,0.183,0.817
+Plural Vote,New Jersey,NJ,0,1
+Plural Vote,New Mexico,NM,0.013,0.987
+Plural Vote,New York,NY,0,1
+Plural Vote,North Carolina,NC,0.53,0.47
+Plural Vote,North Dakota,ND,1,0
+Plural Vote,Ohio,OH,0.801,0.199
+Plural Vote,Oklahoma,OK,1,0
+Plural Vote,Oregon,OR,0,1
+Plural Vote,Pennsylvania,PA,0.595,0.405
+Plural Vote,Rhode Island,RI,0,1
+Plural Vote,South Carolina,SC,0.965,0.035
+Plural Vote,South Dakota,SD,1,0
+Plural Vote,Tennessee,TN,0.996,0.004
+Plural Vote,Texas,TX,0.681,0.319
+Plural Vote,Utah,UT,0.997,0.003
+Plural Vote,Vermont,VT,0,1
+Plural Vote,Virginia,VA,0.101,0.899
+Plural Vote,Washington,WA,0.013,0.987
+Plural Vote,West Virginia,WV,1,0
+Plural Vote,Wisconsin,WI,0.272,0.728
+Plural Vote,Wyoming,WY,1,0
+Plural Vote,District of Columbia,DC,0,1
+Plural Vote,ME-1,ME-1,0.003,0.997
+Plural Vote,ME-2,ME-2,0.294,0.706
+Plural Vote,NE-1,NE-1,0.988,0.012
+Plural Vote,NE-2,NE-2,0.186,0.814
+Plural Vote,NE-3,NE-3,1,0
