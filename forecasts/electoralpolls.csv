@@ -1,20 +1,20 @@
 model,state_name,state_abbr,trump,biden
 Electoral Polls,Alabama,AL,1,0
-Electoral Polls,Alaska,AK,0.972,0.028000000000000025
-Electoral Polls,Arizona,AZ,0.393,0.607
+Electoral Polls,Alaska,AK,0.983,0.017000000000000015
+Electoral Polls,Arizona,AZ,0.399,0.601
 Electoral Polls,Arkansas,AR,1,0
 Electoral Polls,California,CA,0,1
 Electoral Polls,Colorado,CO,0,1
 Electoral Polls,Connecticut,CT,0,1
 Electoral Polls,Delaware,DE,0,1
 Electoral Polls,District of Columbia,DC,0,1
-Electoral Polls,Florida,FL,0.30400000000000005,0.696
-Electoral Polls,Georgia,GA,0.552,0.44799999999999995
+Electoral Polls,Florida,FL,0.30099999999999993,0.6990000000000001
+Electoral Polls,Georgia,GA,0.584,0.41600000000000004
 Electoral Polls,Hawaii,HI,0,1
 Electoral Polls,Idaho,ID,1,0
 Electoral Polls,Illinois,IL,0,1
 Electoral Polls,Indiana,IN,1,0
-Electoral Polls,Iowa,IA,0.5579999999999999,0.44200000000000006
+Electoral Polls,Iowa,IA,0.5720000000000001,0.42799999999999994
 Electoral Polls,Kansas,KS,1,0
 Electoral Polls,Kentucky,KY,1,0
 Electoral Polls,Louisiana,LA,1,0
@@ -22,36 +22,36 @@ Electoral Polls,Maine,ME,0,1
 Electoral Polls,Maryland,MD,0,1
 Electoral Polls,Massachusetts,MA,0,1
 Electoral Polls,ME-1,ME-1,0,1
-Electoral Polls,ME-2,ME-2,0.41100000000000003,0.589
+Electoral Polls,ME-2,ME-2,0.40700000000000003,0.593
 Electoral Polls,Michigan,MI,0.03200000000000003,0.968
-Electoral Polls,Minnesota,MN,0.020000000000000018,0.98
+Electoral Polls,Minnesota,MN,0.018000000000000016,0.982
 Electoral Polls,Mississippi,MS,1,0
 Electoral Polls,Missouri,MO,1,0
-Electoral Polls,Montana,MT,0.998,0.0020000000000000018
-Electoral Polls,NE-1,NE-1,0.774,0.22599999999999998
-Electoral Polls,NE-2,NE-2,0.31799999999999995,0.682
+Electoral Polls,Montana,MT,1,0
+Electoral Polls,NE-1,NE-1,0.7659999999999999,0.2340000000000001
+Electoral Polls,NE-2,NE-2,0.30799999999999994,0.6920000000000001
 Electoral Polls,NE-3,NE-3,1,0
 Electoral Polls,Nebraska,NE,1,0
-Electoral Polls,Nevada,NV,0.16799999999999993,0.8320000000000001
-Electoral Polls,New Hampshire,NH,0.0050000000000000044,0.995
+Electoral Polls,Nevada,NV,0.15300000000000002,0.847
+Electoral Polls,New Hampshire,NH,0.0040000000000000036,0.996
 Electoral Polls,New Jersey,NJ,0,1
 Electoral Polls,New Mexico,NM,0,1
 Electoral Polls,New York,NY,0,1
-Electoral Polls,North Carolina,NC,0.402,0.598
+Electoral Polls,North Carolina,NC,0.40700000000000003,0.593
 Electoral Polls,North Dakota,ND,1,0
-Electoral Polls,Ohio,OH,0.635,0.365
+Electoral Polls,Ohio,OH,0.622,0.378
 Electoral Polls,Oklahoma,OK,1,0
 Electoral Polls,Oregon,OR,0,1
-Electoral Polls,Pennsylvania,PA,0.08799999999999997,0.912
+Electoral Polls,Pennsylvania,PA,0.10699999999999998,0.893
 Electoral Polls,Rhode Island,RI,0,1
 Electoral Polls,South Carolina,SC,1,0
 Electoral Polls,South Dakota,SD,1,0
 Electoral Polls,Tennessee,TN,1,0
-Electoral Polls,Texas,TX,0.775,0.22499999999999998
+Electoral Polls,Texas,TX,0.778,0.22199999999999998
 Electoral Polls,Utah,UT,1,0
 Electoral Polls,Vermont,VT,0,1
 Electoral Polls,Virginia,VA,0,1
 Electoral Polls,Washington,WA,0,1
 Electoral Polls,West Virginia,WV,1,0
-Electoral Polls,Wisconsin,WI,0.025999999999999912,0.9740000000000001
+Electoral Polls,Wisconsin,WI,0.020999999999999908,0.9790000000000001
 Electoral Polls,Wyoming,WY,1,0
