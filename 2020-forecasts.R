@@ -314,11 +314,11 @@ dPC %>%
 
 # Drord's Mapmaking ------------------------------------------------------------
 # https://splittingamerica.neocities.org/new.html
-dDM <- states %>%
-    mutate(trump = NA_real_,
-           biden = NA_real_) %>%
-    mutate(model = "Drord Mapmaking", .before = 1) %>%
-    write_csv(here("forecasts", "drordmapmaking.csv"))
+# dDM <- states %>%
+#     mutate(trump = NA_real_,
+#            biden = NA_real_) %>%
+#     mutate(model = "Drord Mapmaking", .before = 1) %>%
+#     write_csv(here("forecasts", "drordmapmaking.csv"))
 
 # 2016 Map ---------------------------------------------------------------------
 # https://www.270towin.com/maps/2016-actual-electoral-map
